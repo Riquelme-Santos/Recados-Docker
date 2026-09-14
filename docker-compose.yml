@@ -1,0 +1,39 @@
+services:
+
+  front:
+    build: ./frontend
+    container_name: front-recados
+    ports:
+      - "8080:80"
+    networks:
+      - rede-recados
+
+  back:
+    build: ./backend
+    container_name: back-recados
+    ports:
+      - "3000:3000"
+    networks:
+      - rede-recados
+    depends_on:
+      - banco
+  banco:
+    image: mysql:8.0
+    container_name: banco-recados
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: recados
+    volumes:
+      - dados_recados:/var/lib/mysql
+      - ./banco/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - rede-recados
+
+networks:
+
+  rede-recados:
+
+volumes:
+
+  dados_recados:
+
