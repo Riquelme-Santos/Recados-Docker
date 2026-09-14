@@ -18,19 +18,33 @@ Estrutura do projeto
 Recados-Docker/
 
 │
+
 ├── backend/
+
 │   ├── Dockerfile
+
 │   ├── package.json
+
 │   └── server.js
+
 │
+
 ├── banco/
+
 │   └── init.sql
+
 │
+
 ├── frontend/
+
 │   ├── Dockerfile
+
 │   └── ...
+
 │
+
 └── docker-compose.yml
+
 
 🐳 Containers
 Frontend
