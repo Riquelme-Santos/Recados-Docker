@@ -14,7 +14,9 @@ Banco de dados — MySQL 8.0, responsável pelo armazenamento dos recados.
 Docker Network — Os containers se comunicam através da rede rede-recados.
 Docker Volume — Os dados do MySQL são persistidos através do volume dados_recados.
 Estrutura do projeto
+
 Recados-Docker/
+
 │
 ├── backend/
 │   ├── Dockerfile
@@ -223,6 +225,7 @@ O projeto foi desenvolvido com o objetivo de demonstrar, na prática, a utiliza�
 Através do Docker Compose, frontend, backend e banco de dados podem ser executados de forma integrada, utilizando uma rede privada entre os containers e persistência dos dados do banco.
 
 📌 Fluxo da aplicação
+
                     ┌─────────────────────┐
                     │       Usuário       │
                     └──────────┬──────────┘
